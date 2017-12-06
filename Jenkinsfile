@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Example Build') {
+        stage('Build') {
             steps {
                 echo 'Hello World'
             }
         }
-        stage('Example Deploy') {
+        stage('Deploy') {
             when {
                 branch 'production'
                 environment name: 'DEPLOY_TO', value: 'production'
