@@ -5,10 +5,10 @@ pipeline {
     }
     
      parameters {
-        Choice(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
+        string(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
     }
      parameters {
-        boolean(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
+        string(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
     }
     
     
