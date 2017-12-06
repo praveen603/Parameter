@@ -3,9 +3,7 @@ pipeline {
     parameters {
         string(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
     
-        boolean(name: 'REBUILD   ', defaultValue: 'true', description: '')
- 
-        string(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
+        
     }
     stages {
         stage('Example') {
