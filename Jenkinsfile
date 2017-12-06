@@ -1,12 +1,18 @@
 pipeline {
     agent any
-    parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-    }
     stages {
-        stage('Example') {
+        stage('Example Build') {
             steps {
-                echo "Hello ${params.PERSON}"
+                echo 'Hello World'
+            }
+        }
+        stage('Example Deploy') {
+            when {
+                branch 'production'
+                environment name: 'DEPLOY_TO', value: 'production'
+            }
+            steps {
+                echo 'Deploying'
             }
         }
     }
