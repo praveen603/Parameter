@@ -2,9 +2,25 @@ pipeline {
     agent any
     parameters {
         string(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
-        boolean(name: 'REBUILD   ', description: 'Should we rebuild the database')
-
     }
+    
+     parameters {
+        Choice(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
+    }
+     parameters {
+        boolean(name: 'ENVIRONMENT   ', defaultValue: 'Integration', description: 'Select required environment.')
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     stages {
         stage('Example') {
             steps {
